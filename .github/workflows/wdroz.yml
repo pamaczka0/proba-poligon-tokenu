@@ -1,0 +1,15 @@
+name: wdroz
+on:
+  workflow_dispatch:
+    inputs:
+      srodowisko:
+        type: choice
+        options: [dev, prd]
+jobs:
+  wdroz:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.srodowisko }}
+    steps:
+      - run: |
+          echo "::warning::proba ostrzezenia o rozjezdzie"
+          echo "wdrozenie na ${{ inputs.srodowisko }} z galezi ${{ github.ref_name }}"
