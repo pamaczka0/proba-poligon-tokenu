@@ -1,1 +1,1 @@
-tresc startowa
+zmiana przez PR 1792099785.23395
